@@ -31,4 +31,11 @@ public class Warmup {
             return 0;
         }
     }
+    public void main (String[] args) {
+    	int[] a = {1,2,3,4,5};
+    	Stack c = new Stack;
+    	int b = backtrackingSearch(a, 5, 3, 2, c);
+    	System.out.println(b);
+    	
+    }
 }
