@@ -8,4 +8,6 @@ public interface ADTSet<T> {
     T predecessor(T x);
     void print();
     asdasddgs
+    sdafqasdfa
+    
 }
