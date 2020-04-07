@@ -2,8 +2,7 @@ import java.util.Stack;
 
 public class Warmup {
     public static int backtrackingSearch(int[] arr, int x, int fd, int bk, Stack myStack) {
-    	int f = 0;
-    	int d = 0;
+    	int f = 1;// for fd 
     	for (int i = 0; i < arr.length; i++) {
     		if(x == arr[i]) {
     			return i;
