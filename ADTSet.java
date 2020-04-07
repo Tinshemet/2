@@ -7,4 +7,5 @@ public interface ADTSet<T> {
     T successor(T x);
     T predecessor(T x);
     void print();
+    asdasddgs
 }
