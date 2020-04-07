@@ -1,6 +1,25 @@
 public class Warmup {
     public static int backtrackingSearch(int[] arr, int x, int fd, int bk, Stack myStack) {
-        // TODO: implement your code here
+        boolean found=false;
+        while(!found) {
+        	int index=0;
+        	int steps=0;
+        	if(steps==bk) {
+        		while(steps!=0) {
+        			arr[index-1]=myStack.pull;
+        			steps--;
+        			index--;
+        			}
+        	}
+        	if(arr[index]==x) {
+        		return index;
+        	}
+        	else {
+        		myStack.push(arr[index]);
+        		index++
+        	}
+        }
+        return -1;
     }
 
     public static int consistentBinSearch(int[] arr, int x, Stack myStack) {
