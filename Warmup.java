@@ -3,15 +3,15 @@ import java.util.Stack;
 public class Warmup {
     public static int backtrackingSearch(int[] arr, int x, int fd, int bk, Stack myStack) {
     	int f = 1;// for fd 
-    	for (int i = 0; i < arr.length; i++) {
+    	for (int i = 0; i < arr.length; i=i+1) {
     		if(x == arr[i]) {
     			return i;
     		}
     		myStack.push(arr[i]);
 			f=f+1;
 			if(f==fd) {
-				for (int b = 0; b != bk ; b++) {
-					arr[i] = myStack.pop();
+				for (int b = 0; b != bk ; b=b+1) {
+					arr[i] = (int) myStack.pop();
 				}
 				f=0;
 			}
@@ -31,10 +31,10 @@ public class Warmup {
             return 0;
         }
     }
-    public void main (String[] args) {
+    public static void main (String[] args) {
     	int[] a = {1,2,3,4,5};
-    	Stack c = new Stack;
-    	int b = backtrackingSearch(a, 5, 3, 2, c);
+    	Stack stack = new Stack();
+    	int b = backtrackingSearch(a, 4, 3, 2, stack);
     	System.out.println(b);
     	
     }
